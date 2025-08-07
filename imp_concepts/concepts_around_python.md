@@ -48,4 +48,9 @@ class MyClass:
 ## Avoid!
 - Forgetting self in the __init__ signature.
 
+# Why Use `if __name__ == "__main__"?`
+- It ensures that some code runs only when the file is executed directly, not when it's imported!
+
+
+
 
