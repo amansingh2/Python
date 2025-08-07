@@ -1,0 +1,29 @@
+use of __init__.py file is Required to make `my_package` a package
+
+my_package/
+│── __init__.py   # Required to make `my_package` a package
+│── module1.py
+│── module2.py
+
+Without __init__.py, Python might not recognize my_package as an importable module (before Python 3.3).
+
+Just having an empty __init__.py makes Python recognize the directory as a package.
+Now, you can import:
+from my_package import module1
+
+Custom Initialization
+You can pre-load functionality inside __init__.py
+
+my_package/__init__.py
+print("Initializing my_package!")
+
+from .module1 import function1  # Import specific functions
+
+Now, when you import my_package, it prints the message and makes function1 available.
+
+import my_package  # ✅ Prints: Initializing my_package!
+
+my_package/__init__.py
+Define what import * includes
+my_package/__init__.py
+__all__ = ["module1", "module2"]
