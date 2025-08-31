@@ -7,9 +7,21 @@ def func() -> None:
     res = [
         ele1*ele2*ele3 for ele1 in ls1 for ele2 in ls2 for ele3 in ls3
     ]
+
+    # d = {}
+    # d["1"] = 2
+    # d["4"] = 8
+    d = {"a": 2, "b": 8}
+    # print(**d)
+
+    print(*d.items())
+    print(*d.values())
+    # print(**d)
     print(len(res))
 
-    print(res)
+    print(" ".join(f"{k} = {v}" for k , v in d.items()))
+
+    # print(res)
 
 
 
